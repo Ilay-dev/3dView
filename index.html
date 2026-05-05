@@ -30,20 +30,36 @@
 
     <!-- Debug Info Overlay -->
     <div id="debug-overlay">
-        <div>Close one eye for the best result</div>
-        <div id="tracking-status">Status: Initializing...</div>
-        <div>
-            <label><input type="checkbox" id="invert-x-check"> Invert X-Axis</label>
-        </div>
-        <div>
-            <label><input type="checkbox" id="observer-view-check"> Observer View</label>
-        </div>
-        <div>
-            <select id="model-select">
-                <option value="">Loading...</option>
-            </select>
-        </div>
-        <div><button id="calibrate-btn">Reset Center</button></div>
+      <h2>3D Parallax</h2>
+      <p id="tracking-status">Status: Initializing...</p>
+    
+      <div class="control-group">
+          <label class="custom-select">
+              <select id="model-select">
+                  <option value="">Loading Models...</option>
+              </select>
+          </label>
+      </div>
+
+      <div class="control-group">
+          <label class="checkbox-container">
+              <input type="checkbox" id="invert-x-check">
+              <span class="checkmark"></span>
+              Invert X-Axis
+          </label>
+      </div>
+
+      <div class="control-group">
+          <label class="checkbox-container">
+              <input type="checkbox" id="observer-view-check">
+              <span class="checkmark"></span>
+              Observer View
+          </label>
+    </div>
+
+    <button id="calibrate-btn">Reset Center</button>
+    
+    <div class="hint">Close one eye for the best result</div>
     </div>
 
     <script type="module" src="src/main.js?v=1"></script>
