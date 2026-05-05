@@ -31,7 +31,7 @@ body {
     margin: 0 0 10px 0;
     font-size: 18px;
     letter-spacing: 1px;
-    color: #00d4ff;
+    color: #11549c;
 }
 
 #tracking-status {
@@ -72,7 +72,7 @@ select option {
 .checkbox-container input {
     margin-right: 10px;
     cursor: pointer;
-    accent-color: #00d4ff; /* Farbe für moderne Browser */
+    accent-color: #11549c; /* Farbe für moderne Browser */
 }
 
 /* Schöner Button */
@@ -82,7 +82,7 @@ select option {
     padding: 10px;
     border: none;
     border-radius: 8px;
-    background: linear-gradient(135deg, #00d4ff 0%, #0055ff 100%);
+    background: #11549c;
     color: white;
     font-weight: bold;
     cursor: pointer;
