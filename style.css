@@ -2,28 +2,108 @@ body {
     margin: 0;
     overflow: hidden;
     background-color: #000;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 #canvas-container {
     width: 100vw;
     height: 100vh;
-    display: block;
 }
 
+/* Glassmorphism Panel */
 #debug-overlay {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    width: 220px;
+    transition: all 0.3s ease;
 }
 
-#calibrate-btn {
-    margin-top: 5px;
-    padding: 5px 10px;
+#debug-overlay h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #00d4ff;
+}
+
+#tracking-status {
+    font-size: 12px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.control-group {
+    margin-bottom: 12px;
+}
+
+/* Schöneres Auswahlmenü */
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
+    outline: none;
+}
+
+select option {
+    background: #1a1a1a;
+}
+
+/* Custom Checkbox Style */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #00d4ff; /* Farbe für moderne Browser */
+}
+
+/* Schöner Button */
+#calibrate-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0055ff 100%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+#calibrate-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+#calibrate-btn:active {
+    transform: translateY(1px);
+}
+
+/* Hinweis-Text unten */
+.hint {
+    margin-top: 15px;
+    font-size: 11px;
+    font-style: italic;
+    opacity: 0.6;
+    text-align: center;
+    line-height: 1.4;
 }
